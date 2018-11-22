@@ -8,15 +8,23 @@
 ::selection
 	background-color: $accent
 	color: #fff
-
+li
+	list-style: none
+dl, ol, ul,p
+	margin: 0
+	padding: 0
+.no-gutter > [class*='col-']
+	padding-right: 0
+	padding-left: 0
 body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 1.65 
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+	background: $dark_bg
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -38,6 +46,171 @@ body
 b, strong
 	font-weight: bold
 
+.nav_list
+	margin-top: 50px
+	display: flex
+	width: 100%
+	justify-content: flex-end
+	align-items: center
+	li
+		margin-right: 45px
+		&:last-child
+			margin-right: 0
+.nav_link
+	color: #ffffff
+	opacity: .8
+	font-size: 20px
+	transition: all .3s ease
+	font-weight: 500
+	&:hover
+		color: $accent
+		opacity: 1
+		text-decoration: none
+.top_content
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover	
+.first_screen_figure	
+	width: 100%
+	max-width: 185px
+	margin-left: -120px
+	margin-top: 75px
+.carousel_item
+	font-size: 29px
+	color: #ffffff
+	h4
+		font-family: "gotham",sans-serif
+		font-size: 55px
+		margin-bottom: 50px
+	p
+		max-width: 700px
+		margin-bottom: 60px
+	.more_btn
+		background: $accent
+		color: #ffffff
+		font-size: 22px
+		padding: 25px 40px
+		display: inline-block
+		line-height: 1
+		transition: all .3s ease
+		&:hover
+			text-decoration: none
+			background-color: #fff
+			color: $accent
+.owl-theme .owl-dots, .owl-theme .owl-nav
+	text-align: right
+.owl-theme .owl-dots .owl-dot span
+	background: $accent
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+	background: $accent
+	opacity: 0.8
+.services
+	margin-top: 230px
+.services_item
+	position: relative
+	margin-right: 30px
+	margin-bottom: 30px
+	@media (min-width: 992px)
+		flex: 0 0 30% !important
+	.services_info
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		font-size: 21px
+		font-family: 'gotham',sans-serif
+		color: #ffffff
+		padding: 15px 40px
+		background-color: rgba(#292929,.9)
+		min-height: 100px
+		z-index: 2
+		&:hover .hide_content
+			height: 120px
+			margin-top: 15px
+		.hide_content
+			font-size: 11px
+			overflow-y: scroll
+			font-family: $default-font
+			transition: all .3s ease
+			height: 0
+			&::-webkit-scrollbar
+				display: none
+		p
+			margin: 0
+			position: relative
+			&:before
+				content: ''
+				display: inline-block
+				width: 3px
+				height: 100%
+				position: absolute
+				top: 0
+				left: -15px
+				background-color: #fabe00
+		.arrow
+			display: inline-block
+			font-size: 36px
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: 15px
+			width: 15px
+			color: #fabe00
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		z-index: 1
+		background-color: rgba(#fabe00,.7)
+.advantages
+	margin-top: 160px
+	border-top: 1px solid grey
+	.container
+		border-right: 1px solid grey
+		border-left: 1px solid grey
+		[class*=col-]
+			border-right: 1px solid grey
+			&:last-child
+				border-right: none
+.advantages_item
+	padding: 35px 20px
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: 100% 100%
+	height: 100%
 
-
+.top_labels_advantages
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 80px
+	p
+		font-size: 30px
+		font-weight: 500
+	img
+		width: 60px
+.advantages_header
+	font-size: 30px
+	line-height: 1.5
+	font-family: 'gotham',sans-serif
+	margin-bottom: 75px
+.advantages_text
+	font-weight: 500
+	line-height: 1.2
+	font-size: 24px
+	color: #adacac
+	position: relative
+	&:before
+		content: ''
+		display: inline-block
+		height: 3px
+		width: 35px
+		background-color: $accent
+		position: absolute
+		left: 0
+		top: -30px
 @import "media" // Always at the end
