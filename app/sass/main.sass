@@ -213,4 +213,113 @@ b, strong
 		position: absolute
 		left: 0
 		top: -30px
+.info_section
+	background-color: #000
+	.container
+		border-right: 1px solid grey
+		border-left: 1px solid grey
+.info_carousel
+	padding: 30px 60px
+	padding-top: 100px
+	.owl-dots
+		text-align: left
+	.owl-nav
+		font-family: "gotham",sans-serif
+		font-size: 18px
+		position: relative
+		bottom: -33px
+		text-transform: uppercase
+.owl-theme .owl-nav [class*=owl-]:hover
+	background-color: transparent
+	p
+		font-weight: 500
+		line-height: 1.2
+		font-size: 24px
+		color: #adacac
+		position: relative
+.info_carousel_header
+	font-size: 40px
+	font-family: "gotham",sans-serif
+	line-height: 1.2
+	margin-bottom: 55px
+	position: relative
+	&:before
+		content: ''
+		display: inline-block
+		height: 3px
+		width: 35px
+		background-color: $accent
+		position: absolute
+		left: 0
+		top: 0px
+.info_desc
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 100%
+	position: relative
+	width: 150%
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		z-index: 1
+		background-color: rgba(#fabe00,.7)
+	h3
+		font-size: 22px
+		position: absolute
+		top: 210px
+		left: 100px
+		width: 40%
+		z-index: 2
+	.get_more_link
+		position: absolute
+		bottom: 60px
+		left: 100px
+		font-size: 18px
+		color: #ffffff
+		z-index: 2
+		img
+			width: 40px
+			margin-left: 15px
+.bottom_content
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	.info_desc
+		margin-left: -50%
+		h3
+			left: auto
+			right: 100px
+		.get_more_link
+			left: auto
+			right: 100px
+.map_section
+	margin-top: 140px
+	.map_header
+		font-size: 40px
+		font-family: "gotham",sans-serif
+		line-height: 1.2
+		margin-bottom: 55px
+		position: relative
+		&:before
+			content: ''
+			display: inline-block
+			height: 3px
+			width: 35px
+			background-color: $accent
+			position: absolute
+			left: 0
+			top: -30px
+	.map_text
+		font-weight: 500
+		line-height: 1.2
+		font-size: 24px
+		color: #adacac
+		e
+		
 @import "media" // Always at the end
