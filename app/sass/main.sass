@@ -3,7 +3,7 @@
 @import "libs"
 
 ::placeholder
-	color: #666
+	color: $text
 
 ::selection
 	background-color: $accent
@@ -33,6 +33,50 @@ body
 		&:required:valid
 			border-color: green
 
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha (opacity=$opacity)
+.preloader
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	z-index: 100
+	background-color: $dark_bg
+	.pulse
+		position: relative
+		left: 48%
+		top: 50vh
+		margin:
+			top: -40px
+			right: -40px
+		&::before, &::after
+			content: ''
+			border: 5px solid #323232
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .8s ease-in infinite
+		&::after
+			animation: pulse-inner .8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
 .img-responsive
 	display: block
 	max-width: 100%
@@ -124,38 +168,40 @@ b, strong
 		background-color: rgba(#292929,.9)
 		min-height: 100px
 		z-index: 2
-		&:hover .hide_content
-			height: 120px
-			margin-top: 15px
-		.hide_content
-			font-size: 11px
-			overflow-y: scroll
-			font-family: $default-font
-			transition: all .3s ease
-			height: 0
-			&::-webkit-scrollbar
-				display: none
-		p
-			margin: 0
-			position: relative
-			&:before
-				content: ''
-				display: inline-block
-				width: 3px
-				height: 100%
-				position: absolute
-				top: 0
-				left: -15px
-				background-color: #fabe00
-		.arrow
+	&:hover .hide_content
+		height: 135px
+		margin-top: 15px
+	&:hover .services_info
+		background-color: rgba(#000,.9)
+	.hide_content
+		font-size: 11px
+		overflow-y: scroll
+		font-family: $default-font
+		transition: all .3s ease
+		height: 0
+		&::-webkit-scrollbar
+			display: none
+	p
+		margin: 0
+		position: relative
+		&:before
+			content: ''
 			display: inline-block
-			font-size: 36px
+			width: 3px
+			height: 100%
 			position: absolute
-			top: 50%
-			transform: translateY(-50%)
-			right: 15px
-			width: 15px
-			color: #fabe00
+			top: 0
+			left: -15px
+			background-color: #fabe00
+	.arrow
+		display: inline-block
+		font-size: 36px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 15px
+		width: 15px
+		color: #fabe00
 	&:after
 		content: ''
 		display: block
@@ -243,6 +289,7 @@ b, strong
 	line-height: 1.2
 	margin-bottom: 55px
 	position: relative
+	padding-top: 25px
 	&:before
 		content: ''
 		display: inline-block
@@ -320,6 +367,137 @@ b, strong
 		line-height: 1.2
 		font-size: 24px
 		color: #adacac
-		e
-		
+
+.contact_us
+	padding-top: 200px
+	background-color: $dark_bg
+.form_wrapper
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	background-color: $dark
+	border-radius: 20px
+	padding: 50px 120px
+.info_column
+	width: 47%
+.form_heading
+	text-transform: uppercase
+	margin-bottom: 40px
+.form_header
+	font-size: 43px
+	font-family: "gotham",sans-serif
+	margin-bottom: 40px
+.form_text
+	font-size: 18px
+	color: #999
+.contacts_list
+	margin-top: 40px
+.contacts_list_item
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	margin-bottom: 20px
+	.contacts_list_img
+		width: 50px
+	.contact_text
+		font-family: "gotham",sans-serif
+		font-size: 13px
+		max-width: 220px
+		margin-left: 20px
+		a
+			color: $text
+		span
+			display: block
+.success
+		position: absolute
+		display: none
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		background-color: rgba(255,255,255,.7)
+		z-index: 2
+		.success_text
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			font-size: 24px
+			transform: translate(-50%,-50%)
+		.close_succes
+			color: #000
+			position: absolute
+			width: 25px
+			height: 25px
+			top: 20px
+			left: 20px
+			cursor: pointer
+			&:before,&:after
+				content: ''
+				width: 100%
+				height: 3px
+				background-color: #000
+				display: block
+				transform-origin: 10px 2px
+			&:before
+				transform: rotate(45deg)
+			&:after
+				transform: rotate(-45deg)
+.callback
+	width: 100%
+	input,textarea
+		background-color: transparent
+		border: none
+		outline: none
+		color: $text
+		font-size: 13px
+		font-family: "gotham",sans-serif
+		width: 100%
+		line-height: 55px
+		border-bottom: 2px solid $text
+.sub_button
+	width: 100%
+	background-color: $text
+	color: $dark
+	text-align: center
+	border-radius: 35px
+	border: none
+	outline: none
+	margin-top: 40px
+	padding: 20px 0
+	cursor: pointer
+.form_label
+	text-align: right
+	font-family: "gotham",sans-serif
+	font-size: 35px
+	position: relative
+	&:before
+		content: ''
+		display: inline-block
+		height: 3px
+		width: 35px
+		background-color: $accent
+		position: absolute
+		right: 0
+		top: -20px
+.partners
+	padding: 150px 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+.partners_img
+	max-width: 25%
+	width: 20%
+.footer
+	background-color: $dark
+	padding: 60px
+	color: #848484
+	a
+		display: block
+		color: inherit
+.footer_logo
+	width: 110px
+	margin-bottom: 15px
+
 @import "media" // Always at the end

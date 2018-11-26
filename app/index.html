@@ -27,7 +27,7 @@
 </head>
 
 <body>
-
+	<div class="preloader"><div class="pulse"></div></div>
 	<!-- Custom HTML -->
 
 	<div class="top_content" style="background-image: url('./img/top_content_bg.jpg') ">
@@ -36,18 +36,18 @@
 			<div class="row justify-content-end">
 				<nav class="navigation">
 					<ul class="nav_list">
-						<li><a href="#" class="nav_link">ГЛАВНАЯ</a></li>
-						<li><a href="#" class="nav_link">О КОМПАНИИ</a></li>
-						<li><a href="#" class="nav_link">ОБОРУДОВАНИЕ</a></li>
-						<li><a href="#" class="nav_link">УСЛУГИ</a></li>
-						<li><a href="#" class="nav_link">КОНТАКТЫ</a></li>
+						<li><a href="#home" class="nav_link">ГЛАВНАЯ</a></li>
+						<li><a href="#about" class="nav_link">О КОМПАНИИ</a></li>
+						<li><a href="#products" class="nav_link">ОБОРУДОВАНИЕ</a></li>
+						<li><a href="#services" class="nav_link">УСЛУГИ</a></li>
+						<li><a href="#contact" class="nav_link">КОНТАКТЫ</a></li>
 					</ul>
 				</nav>
 			</div>
 			<div>
 				<img src="./img/figure.png" alt="#" class="first_screen_figure">
 			</div>
-			<div class="row justify-content-center">
+			<div class="row justify-content-center" id="home">
 				<div class="owl-carousel owl-theme first_screen_carousel">
 					<div class="carousel_item">
 						<h4>МЫ - KADATEC</h4>
@@ -68,7 +68,7 @@
 
 				</div>
 			</div>
-			<div class="row justify-content-center services no-gutter">
+			<div class="row justify-content-center services no-gutter" id="about">
 				<a href="#" class="col-lg-4 col-sm-6 services_item">
 					<img src="./img/services/1.jpg" alt="#" class="service_img img-width img-responsive">
 					<div class="services_info">
@@ -112,7 +112,7 @@
 				<a href="#" class="col-lg-4 col-sm-6 services_item">
 					<img src="./img/services/5.jpg" alt="#" class="service_img img-width img-responsive">
 					<div class="services_info">
-						<p>АВТОЦИСТЕРНЫ СУГ</p>
+						<p>АВТОЦИСТЕРНЫ <br> СУГ</p>
 						<p class="hide_content">Являясь новым продуктом 2014 года, мы расширили нашу продукцию на современном и технологически совершенном автоцистерне LPG в размерах резервуаров 13-60 м3, подходящем для смесей сжиженного нефтяного газа A, B, C. Наши автоцистерны сертифицированы в соответствии со стандартом ADR 2013 и Директива по европейскому транспортному оборудованию TPED (2010/35 / EU, NV 208/2011).</p>
 						<span class="arrow">
 							<img src="./img/arrow-right.png" class="img-width img-responsive" alt="#">
@@ -163,7 +163,7 @@
 	
 		</div>
 	</div>
-	<div class="advantages">
+	<div class="advantages" id="products">
 		<div class="container">
 			<div class="row justify-content-center row-eq-height no-gutter">
 				<div class="col-lg-3 col-sm-6">
@@ -232,7 +232,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="info_section">
+	<div class="info_section" id="services">
 		<div class="container">
 			<div class="row no-gutter">
 				<div class="col-md-6">
@@ -353,7 +353,129 @@
 			</div>
 		</div>
 	</div>
-	<section class="contact_us"></section>
+	<section class="contact_us" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="form_wrapper">
+						<div class="info_column">
+							<p class="form_heading">
+								ЕСЛИ У ВАС ЕСТЬ ВОПРОС
+							</p>
+							<p class="form_header">
+								Свяжитесь <br> с нами
+							</p>
+							<p class="form_text">
+								Свяжитесь с нами напрямую, либо воспользуйтесь формой обратной связи
+							</p>
+							<div class="contacts_list">
+								<div class="contacts_list_item">
+									<img src="img/email_ico.png" alt="#" class="contacts_list_img">
+									<div class="contact_text">
+										<a href="mailto:kadatec@kadatec.cz">kadatec@kadatec.cz</a>
+									</div>
+								</div>
+								<div class="contacts_list_item">
+									<img src="img/phone_ico.png" alt="#" class="contacts_list_img">
+									<div class="contact_text">
+										<span>phone: +420 317 705 090</span>
+										<span>fax: +420 317 705 071</span>
+										<span>mobile: +420 724 850 699</span>
+									</div>
+								</div>
+								<div class="contacts_list_item">
+									<img src="img/placeholder_ico.png" alt="#" class="contacts_list_img">
+									<div class="contact_text">
+										<span>KADATEC s.r.o. Area ZZN
+											Industrial zone 257 64 Zdislavice
+											Czech Republic</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="info_column">
+							<h2 class="form_label">
+								ОБРАТНАЯ<br> СВЯЗЬ 
+							</h2>
+							<form class="callback clearfix">
+								<div class="success">
+									<span class="close_succes" onclick="event.preventDefault(); $('.success').removeClass('active').hide();"></span>
+									<span class="success_text text-center">Ваше сообщение отправлено,
+										<br>мы скоро ответим Вам</span>
+								</div>
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="project_name" value="Kadatech">
+								<input type="hidden" name="admin_email" value="mail@mail.com">
+								<!-- Admin email -->
+								<input type="hidden" name="form_subject" value="Страница Kadatech">
+								<input type="hidden" name="page" value="Страница Kadatech">
+								<!-- END Hidden Required Fields -->
+								<div class="input_wrapper clearfix">
+									<div class="input_box">
+										<input class="reset" type="email" name="E-mail" id="user_email" placeholder="ВАШ EMAIL" required>
+									</div>
+									<div class="input_box">
+										<input class="reset" type="tel" name="Phone" id="user_phone" placeholder="ВАШ ТЕЛЕФОН" required>
+									</div>
+								</div>
+								<textarea class="reset" name="Message" id="message_text" cols="30" rows="3" placeholder="ВАШЕ СООБЩЕНИЕ" required></textarea>
+								<button class="sub_button btn">ОТПРАВИТЬ</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="partners">
+					<img src="img/partners/1.png" alt="#" class="partners_img">
+					<img src="img/partners/2.png" alt="#" class="partners_img">
+					<img src="img/partners/3.png" alt="#" class="partners_img">
+					<img src="img/partners/4.png" alt="#" class="partners_img">
+					<img src="img/partners/5.png" alt="#" class="partners_img">
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-md-4">
+					<img src="img/logo_footer.png" class="footer_logo" alt="#">
+					<p>KADATEC</p>
+					<p>Все права защищены</p>
+				</div>
+				<div class="col-md-4">
+					<a href="#">
+						Емкости на пропан-бутан
+					</a>
+					<a href="#">
+						Автоцистерны для СУГ
+					</a>
+					<a href="#">
+						ISO Цистерновые контейнеры
+					</a>
+					<a href="#">
+						Системы измерения потока газа
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="#">
+						Компактные АГЗС
+					</a>
+					<a href="#">
+						Оборудование для емкостей
+					</a>
+					<a href="#">
+						Насосы и компрессоры
+					</a>
+					<a href="#">
+						Испарители СУГ
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<script src="js/scripts.min.js"></script>
 
