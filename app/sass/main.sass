@@ -299,13 +299,17 @@ b, strong
 		position: absolute
 		left: 0
 		top: 0px
+.top_slider .info_desc
+	display: none
 .info_desc
 	background-position: center center
 	background-repeat: no-repeat
 	background-size: cover
 	height: 100%
-	position: relative
+	position: absolute
 	width: 150%
+	top: 0
+	left: 0
 	&:after
 		content: ''
 		display: block
@@ -500,4 +504,46 @@ b, strong
 	width: 110px
 	margin-bottom: 15px
 
+.menu-btn
+	border: none
+	background-color: transparent
+	display: none
+	width: 50px
+	height: 50px
+	position: relative
+.menu-btn span
+  position: absolute
+  top: 50%
+  margin-top: -1px
+  left: 50%
+  margin-left: -10px
+  width: 20px
+  height: 2px
+  background-color: #fff
+		&::before, &::after
+			content: ''
+			position: absolute
+			top: 50%
+			margin-top: -1px
+			left: 50%
+			margin-left: -10px
+			width: 20px
+			height: 2px
+			background-color: #fff
+			transition: 0.2s
+			display: block
+		&::before
+			transform: translateY(-5px)
+		&::after
+			transform: translateY(5px)
+.menu-btn_active span
+	&::before
+		transform: rotate(-90deg)
+
+.menu-btn_active span
+		transform: rotate(45deg)
+
+.menu-btn_active span
+	&::after
+		opacity: 0
 @import "media" // Always at the end

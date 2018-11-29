@@ -5,12 +5,13 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
-
-// ≥992px
-+media-breakpoint-down(md)
     .info_desc
         width: 100%
         margin: 0
+// ≥992px
++media-breakpoint-down(md)
+    .info_desc
+        position: initial
     .bottom_content .info_desc
         margin: 0
     .info_carousel_header
@@ -21,6 +22,29 @@
         padding: 50px 30px
 // ≥768px
 +media-breakpoint-down(sm)
+    .navigation
+        width: 100%
+    .nav_list
+        background-color: rgba(0,0,0,.9)
+        display: none
+        position: fixed
+        top: 30px
+        left: 0
+        right: 0
+        z-index: 10
+        &.active
+            display: block
+        li
+            margin: 0 auto
+            text-align: center
+            padding: 20px 0
+            display: block
+    .menu-btn
+        display: block
+        position: fixed
+        top: 10px
+        right: 10px
+        z-index: 10
     .form_label:before
         width: 100%
     .carousel_item
